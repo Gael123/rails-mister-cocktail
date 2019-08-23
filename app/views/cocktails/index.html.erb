@@ -1,11 +1,21 @@
 <h1>Cocktails</h1>
 <body>
 
+  <div class="cocktail-banner mb-4 p-64"
+     style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('https://images.unsplash.com/photo-1500957186304-939a55d9cd4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+">
+<h1 >  <% @cocktails.each do |cocktail|%>
+    <%=cocktail.name %></h1>
 
-   <%= @cocktails.each do |cocktail|%>
-    <%=cocktail.name %>
+  <div class = card-trip >
 
-   <% end %>
+      <%= link_to cocktail do %>
+            <%= cocktail.name %>
+        <% end %>
+        <% end %>
+      <div><%= link_to 'add a cocktail', new_cocktail_path%>   </div>
+  </div>
+  </div>
 
 </body>
 

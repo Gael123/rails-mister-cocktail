@@ -1,1 +1,11 @@
-_form.html.erb
+<div class ="row  justify-content-center">
+  <div class = col-4>
+    <%= simple_form_for(@cocktail)  do |form|%>
+    <%= form.input :name %>
+    <%= form.button :submit, class: 'btn btn-primary'  %>
+
+    <% end %>
+  </div>
+
+</div>
+
