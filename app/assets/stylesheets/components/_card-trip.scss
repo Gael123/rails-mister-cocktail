@@ -4,11 +4,15 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
+.card-trip{
+ text-align:center;
+  padding:48px;
+
+}
 
 
-
-.card-trip h2 {
-  font-size: 16px;
+.card-trip h1{
+  font-size: 64px;
   font-weight: bold;
   margin: 0;
 }
