@@ -51,6 +51,10 @@
       <%= form.button :submit, class: 'btn btn-primary' %>
     <% end %>
   </div>
+  <%= link_to "Delete", dose_path(dose),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
 
 
 </div>

@@ -1,8 +1,38 @@
-<div class ="row  justify-content-center">
-  <div class = col-4>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" %>
+    <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "cocktails", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <%= image_tag "https://images.unsplash.com/photo-1494847834698-2f5d9138a3ce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Action", "#", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<h1> Adding a cocktail</h1>
+<div class ="row  justify-content-space-around m-6">
+  <div class = "col-8">
     <%= simple_form_for(@cocktail)  do |form|%>
     <%= form.input :name %>
-    <%= form.button :submit, class: 'btn btn-primary'  %>
+    <%= form.button :submit, class: 'btn btn-primary', placeholder: 'create a new cocktail'  %>
 
 
     <% end %>

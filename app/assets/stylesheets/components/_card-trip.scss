@@ -1,11 +1,12 @@
 .card-trip {
-  display: block;
+  display:flex;
+  justify-content:space-around;
   overflow: hidden;
-  background: white;
+  background: green;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 .card-trip{
- text-align:center;
+
   padding:48px;
 
 }
