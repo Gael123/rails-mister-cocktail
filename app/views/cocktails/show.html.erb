@@ -1,18 +1,24 @@
-
-<h1>    <%= @cocktail.name %></h1>
-
-%= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
-  <%= @cocktail.doses.each do|dose|  %>
-  <%= @dose.description %>
-  <%= link_to 'Delete',dose_path(dose),method: :delete, 'data-confirm':'are you sure?' %>
-  <% end  %>
-
-
-<div class="card"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <img src="https://images.unsplash.com/photo-1542849187-5ec6ea5e6a27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" />
+</a>
 </div>
+
+<div class=" cocktail-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1475360149137-5ffb64357c52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);">
+  <div class="container">
+    <h1><strong>  <%= @cocktail.name.capitalize! %> </strong>!</h1>
+       <%= @cocktail.doses.each do|dose|  %>
+      <%= @dose.description %>
+  <% end %>
+   </div>
+</div>
+
+
+
+
+
+
+
 
 
 

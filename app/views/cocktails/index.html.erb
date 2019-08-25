@@ -10,13 +10,11 @@
 
       <%=cocktail.name %></h1>
     <div class = "cocktail-list">
-
-    <%= link_to cocktail do %>
+      <%= link_to cocktail do %>
             <%= cocktail.name %>
         <% end %>
         <% end %>
-
-      <div><%= link_to 'add a cocktail', new_cocktail_path%>   </div>
+   <%= link_to 'add a cocktail', new_cocktail_path%>
   </div>
 
 
