@@ -7,7 +7,7 @@ def new
  def create
   @dose = Dose.new(dose_params)
   @cocktail = Cocktail.find(params[:cocktail_id])
-  @dose.cocktail =@cocktail
+  @dose.cocktail = @cocktail
   if @dose.save
       redirect_to @cocktail
     else
@@ -18,6 +18,7 @@ def new
  def destroy
   @dose = Dose.find(params[:id])
   @dose.destroy
+  redirect_to new_cocktail_path
  end
 
 def dose_params

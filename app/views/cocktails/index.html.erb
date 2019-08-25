@@ -1,22 +1,24 @@
-<h1>Cocktails</h1>
+<h1 class = "cocktail-header">Cocktails</h1>
 
   <div class="cocktail-banner mb-4 p-16"
      style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
 ">
  </div>
+<div class = "cocktail-list">
+  <div class = "row justify-content-space-around py-4 mt-6" >
+      <div class = "col-4">
+      <% @cocktails.each do |cocktail|%>
 
-  <div class = "row justify-content-space-around" >
-    <div class = "col-8">
-    <% @cocktails.each do |cocktail|%>
-    <div class cocktail-list>
-      <li><%=cocktail.name.capitalize %>
-      <%= link_to cocktail do %>
+      <%=cocktail.name.capitalize %>
+    </div>
+        <div class ="col-4"><%= link_to cocktail do %></div>
             <%= cocktail.name %>
         <% end %>
-        <% end %></li>
-        </div>
+        <% end %>
+
        </div>
     </div>
+  </div>
 
     <div class = "cocktail-header">
 
