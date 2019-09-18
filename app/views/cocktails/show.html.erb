@@ -1,24 +1,16 @@
 
 
-<div class=" cocktail-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1475360149137-5ffb64357c52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);">
+<div class="cocktail-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1475360149137-5ffb64357c52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);">
   <div class="container">
-  <div class="row">
+
     <% @cocktail.doses.each do |dose| %>
-      <div class="col-4">
+
         <%=  @cocktail %>
-      </div>
+        <h1><%= @cocktail.dose.description %></h1>
+
     <% end %>
-    <div class="col-4">
-      <%= link_to new_cocktail_dose_path(@cocktail), class: 'card-trip' do %>
-        <img src="https://place-hold.it/320x240/a00/fff/?text=Add%20New%20Plant" />
-        <div class="card-trip-infos">
-          <div>
-            <h2>Add New Cocktail</h2>
-          </div>
-        </div>
-      <% end %>
+
     </div>
-  </div>
 </div>
 
 

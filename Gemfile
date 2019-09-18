@@ -43,9 +43,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
-
-
-
+gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

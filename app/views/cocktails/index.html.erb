@@ -1,35 +1,29 @@
-<h1 class = "cocktail-header">Cocktails</h1>
 
-  <div class="cocktail-banner mb-4 p-16"
-     style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
-">
- </div>
-<div class = "cocktail-list">
-  <div class = "row justify-content-space-around py-4 mt-6" >
-      <div class = "col-4">
-      <% @cocktails.each do |cocktail|%>
+<div class="cocktail-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');">
+  <div class="container">
+    <h1>Fancy cocktails brings you  the best cocktails to  people who know their stuff!</h1>
+    <p> Come to <strong>Fancy Cocktails and change your life</strong></p>
+     <%= link_to 'add a cocktail', new_cocktail_path,class: "btn btn-ghost"%>
 
-      <%=cocktail.name.capitalize %>
-    </div>
-        <div class ="col-4"><%= link_to cocktail do %></div>
-            <%= cocktail.name %>
-        <% end %>
-        <% end %>
-
-       </div>
-    </div>
   </div>
+</div>
+<div class="card-product">
 
-    <div class = "cocktail-header">
-
-   <h1><%= link_to 'add a cocktail', new_cocktail_path%>
-
-     </h1>
-
-
-    </div>
-   </new_cocktail_path%>
+  <div class="card-product-infos">
+    <% @cocktails.each do |cocktail|%>
+      <h1><%=cocktail.name.capitalize %></h1>
+      <%= link_to cocktail_path(cocktail), remote: true do  %>
+      <%= cl_image_tag cocktail.photo.url %>
+      <% end %>
+    <% end %>
   </div>
+</div>
+
+
+
+
+
+
 
 
 
