@@ -1,14 +1,18 @@
 
 
-<div class="cocktail-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1475360149137-5ffb64357c52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);">
-  <div class="container">
+<div class="show-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1475360149137-5ffb64357c52?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);">
+  <h1> <%=  @cocktail.name.upcase! %></h1>
+  <div class="show-container">
 
-    <% @cocktail.doses.each do |dose| %>
 
-        <%=  @cocktail %>
-        <h1><%= @cocktail.dose.description %></h1>
 
-    <% end %>
+
+        <%= @cocktail.doses.each do |dose|%>
+      <h1><%cocktail.dose.description%></h1>
+      <%end %>
+
+
+        <%= link_to 'Back to Cocktails', cocktails_path, class: "btn-ghost"  %>
 
     </div>
 </div>
