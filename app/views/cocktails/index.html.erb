@@ -7,16 +7,22 @@
 
   </div>
 </div>
-<div class="card-product">
-
-  <div class="card-product-infos">
-    <% @cocktails.each do |cocktail|%>
+<div class ="index-container">
+  <% @cocktails.each do |cocktail|%>
+    <div class="card-product">
+      <div class="card-product-infos">
+        <%= link_to cocktail_path(cocktail), remote: true do  %>
+        <%= cl_image_tag cocktail.photo.url %>
+         <% end %>
       <h1><%=cocktail.name.capitalize %></h1>
-      <%= link_to cocktail_path(cocktail), remote: true do  %>
-      <%= cl_image_tag cocktail.photo.url %>
-      <% end %>
+
+
+       </div>
+
+       </div>
     <% end %>
-  </div>
+
+
 </div>
 
 
