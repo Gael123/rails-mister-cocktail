@@ -42,7 +42,7 @@ gem 'simple_form'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'cloudinary', '~> 1.9.1'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 gem 'faker'
 
 group :development, :test do
